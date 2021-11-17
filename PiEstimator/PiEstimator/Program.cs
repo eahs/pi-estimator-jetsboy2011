@@ -26,7 +26,26 @@ namespace PiEstimator
             double pi = 0.0;
 
             // TODO: Calculate Pi
+            double point;
+            double rad;
+            double ratio = 0;
+            double hits = 0;
+            for(int i = 0;i < n; i++)
+            {
+                double xa = rand.NextDouble();
+                double ya = rand.NextDouble();
+                rad = (xa * xa) + (ya * ya);
+                if (rad < 1)
+                {
+                    hits++;
+                }
 
+            }
+
+            ratio = hits / n;
+            pi = ratio * 4;
+            return pi;
+            
             return pi;
         }
 
